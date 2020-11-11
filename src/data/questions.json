@@ -1,0 +1,62 @@
+[
+  {
+    "question": "How many seconds are in an hour?",
+    "answers": ["1000", "2345", "3600", "6300"],
+    "correct": "3600"
+  },
+  {
+    "question": "What makeup product makes eyelashes appear longer?",
+    "answers": ["Mascara", "Blush", "Foundation", "Lipstick"],
+    "correct": "Mascara"
+  },
+  {
+    "question": "What city contains the Eiffel Tower?",
+    "answers": ["Sydney", "Las Angeles", "New York City", "Paris"],
+    "correct": "Paris"
+  },
+  {
+    "question": "Which sport is also known as football?",
+    "answers": ["Soccer", "Basketball", "Baseball", "Cricket"],
+    "correct": "Soccer"
+  },
+  {
+    "question": "How many continents are there?",
+    "answers": ["5", "6", "7", "8"],
+    "correct": "7"
+  },
+  {
+    "question": "Who wasn't a member of the Beatles?",
+    "answers": ["John Lennon", "Paul McCartney", "Ringo Star", "Justin Timberlake"],
+    "correct": "Justin Timberlake"
+  },
+  {
+    "question": "Which of the following is not a type of pasta?",
+    "answers": ["Spaghetti", "Escargot", "Fettuccine", "Ziti"],
+    "correct": "Escargot"
+  },
+  {
+    "question": "Which state has cities named San Francisco and Hollywood?",
+    "answers": ["California", "Utah", "Hawaii", "Montana"],
+    "correct": "California"
+  },
+  {
+    "question": "Which instrument does not have strings?",
+    "answers": ["Guitar", "Bass", "Trombone", "Cello"],
+    "correct": "Trombone"
+  },
+  {
+    "question": "What product does Tesla produce?",
+    "answers": ["Ice cream", "Televisions", "Hair brushes", "Electric cars"],
+    "correct": "Electric cars"
+  },
+  {
+    "question": "Which animal is not a primate?",
+    "answers": ["Chimpanzee", "Dolphin", "Gorillla", "Orangutan"],
+    "correct": "Dolphin"
+  },
+  {
+    "question": "What gas makes voices sound higher when inhaled?",
+    "answers": ["Oxygen", "Nitrogen", "Sulfur Hexafluoride", "Helium"],
+    "correct": "Helium"
+  }
+]

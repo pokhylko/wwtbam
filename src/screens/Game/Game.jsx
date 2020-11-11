@@ -1,55 +1,52 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Game.scss';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import MobileMenu from '../../components/MobileMenu/MobileMenu';
 import questions from '../../data/questions.json';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 const STEPS = [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
 
-export const Game = ({ setGameStart, setGameOver, setScore }) => {
+const Game = ({ setGameStart, setGameOver, setScore }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [correctAnswer, setCorrectAnswer] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState(false);
   const [wrongAnswer, setWrongAnswer] = useState(false);
+  const [showStep, setShowStep] = useState(false);
   const reverseSteps = [...STEPS].reverse();
   const currentQuestion = questions[currentStep];
 
   const checkAnswer = (answer) => {
+    setSelectedAnswer(answer);
+
     if (answer !== currentQuestion.correct) {
-      setWrongAnswer(answer);
+      setTimeout(() => {
+        setWrongAnswer(answer);
+      }, 1000);
     }
-      
+
     if (answer === currentQuestion.correct && currentStep === 10) {
-      setCorrectAnswer(answer);
+      setTimeout(() => {
+        setCorrectAnswer(answer);
+      }, 1000);
     }
 
     if (answer === currentQuestion.correct) {
-      setCorrectAnswer(answer);
+      setTimeout(() => {
+        setCorrectAnswer(answer);
+      }, 1000);
     }
-  }
-
-  const gameOver = useCallback((finishStep) => {
-    gameScore(finishStep);
-    setGameStart(false);
-    setGameOver(true);
-  }, [])
+  };
 
   useEffect(() => {
     if (correctAnswer) {
       setTimeout(() => {
-        setCurrentStep(state => state + 1);
+        setCurrentStep((state) => state + 1);
         setCorrectAnswer(false);
-      }, 1000);
+      }, 2000);
     }
   }, [correctAnswer]);
-    
-  useEffect(() => {
-    if (wrongAnswer) {
-      setTimeout(() => {
-        gameOver(currentStep);
-        setWrongAnswer(false);
-      }, 1000);
-    }
-  }, [wrongAnswer, currentStep, gameOver]);
 
   const gameScore = (finishStep) => {
     if (finishStep === 0) {
@@ -57,7 +54,22 @@ export const Game = ({ setGameStart, setGameOver, setScore }) => {
     } else {
       setScore(STEPS[finishStep - 1]);
     }
-  }
+  };
+
+  const gameOver = (finishStep) => {
+    gameScore(finishStep);
+    setGameStart(false);
+    setGameOver(true);
+  };
+
+  useEffect(() => {
+    if (wrongAnswer) {
+      setTimeout(() => {
+        gameOver(currentStep);
+        setWrongAnswer(false);
+      }, 1500);
+    }
+  }, [wrongAnswer, currentStep, gameOver]);
 
   return (
     <div className="game-field">
@@ -72,10 +84,12 @@ export const Game = ({ setGameStart, setGameOver, setScore }) => {
                   'game-field__answer',
                   'answer-button',
                   {
+                    'answer-button_selected': answer === selectedAnswer,
                     'answer-button_correct': answer === correctAnswer,
-                    'answer-button_wrong': answer === wrongAnswer
-                  }
+                    'answer-button_wrong': answer === wrongAnswer,
+                  },
                 )}
+                type="button"
                 key={answer}
                 onClick={() => checkAnswer(answer)}
               >
@@ -86,24 +100,40 @@ export const Game = ({ setGameStart, setGameOver, setScore }) => {
           </div>
         </div>
 
-        <div className="game-field__steps">
-          {reverseSteps.map(step => (
-            <div
-              className={classNames(
-                'game-field__step',
-                {
-                  'game-field__step_inactive': step > STEPS[currentStep],
-                  'game-field__step_current': step === STEPS[currentStep],
-                  'game-field__step_finished': step < STEPS[currentStep],
-                }
-              )}
-              key={step}
-            >
-              {`$${step.toLocaleString()}`}
-            </div>
-          ))}
+        <div className={classNames(
+          'game-field__steps',
+          { 'mobile-hidden': !showStep },
+        )}
+        >
+          <div className="game-field__steps-list">
+            {reverseSteps.map((step) => (
+              <div
+                className={classNames(
+                  'game-field__step',
+                  {
+                    'game-field__step_inactive': step > STEPS[currentStep],
+                    'game-field__step_current': step === STEPS[currentStep],
+                    'game-field__step_finished': step < STEPS[currentStep],
+                  },
+                )}
+                key={step}
+              >
+                {`$${step.toLocaleString()}`}
+              </div>
+            ))}
+          </div>
         </div>
+
+        <MobileMenu setShowStep={setShowStep} />
       </div>
     </div>
-  )
-}
+  );
+};
+
+Game.propTypes = {
+  setGameStart: PropTypes.func.isRequired,
+  setGameOver: PropTypes.func.isRequired,
+  setScore: PropTypes.func.isRequired,
+};
+
+export default Game;

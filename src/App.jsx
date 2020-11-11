@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.scss';
-import { Start } from './screens/Start';
-import { Game } from './screens/Game';
+import './App.css';
+import Start from './screens/Start/Start';
+import Game from './screens/Game/Game';
 
 const App = () => {
   const [gameStart, setGameStart] = useState(false);
@@ -25,6 +25,6 @@ const App = () => {
       )}
     </div>
   );
-}
+};
 
 export default App;

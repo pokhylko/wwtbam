@@ -16,6 +16,16 @@
     margin: 0 auto;
   }
 
+  &__logo {
+    width: 100%;
+    max-width: 45rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-family: Inter;
     font-size: 5.6rem;
@@ -48,8 +58,9 @@
     background-color: #ff8b37;
     border: none;
     border-radius: 1.2rem;
-    padding: 2rem 12.3rem;
+    padding: 2rem 2.4rem;
     transition: all 0.3s;
+    width: 29.6rem;
 
     &:hover {
       background-color: #ffac70;
@@ -57,6 +68,55 @@
 
     &:active {
       background-color: #e87928;
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) and (min-width: 992px) {
+  .game-start {
+    &__wrapper {
+      width: 80rem;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .game-start {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding: 5rem 1.5rem;
+    }
+
+    &__logo {
+      max-width: 19.6rem;
+      flex: 50%;
+    }
+
+    &__content {
+      align-items: center;
+      justify-content: space-between;
+      flex: 50%;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+      line-height: 3.712rem;
+      text-align: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .game-start {
+    &__button {
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      border-radius: 0.8rem;
+      padding: 1.6rem 2.4rem;
+      width: 28.8rem;
     }
   }
 }

@@ -1,0 +1,16 @@
+.mobile-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  &__button {
+    border: none;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .mobile-menu {
+    display: none;
+  }
+}

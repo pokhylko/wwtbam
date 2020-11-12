@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.2cb1b48e.chunk.css",
-    "main.js": "./static/js/main.67715ddf.chunk.js",
-    "main.js.map": "./static/js/main.67715ddf.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.e1a3c8cf.js",
-    "runtime-main.js.map": "./static/js/runtime-main.e1a3c8cf.js.map",
-    "static/js/2.461ffeb4.chunk.js": "./static/js/2.461ffeb4.chunk.js",
-    "static/js/2.461ffeb4.chunk.js.map": "./static/js/2.461ffeb4.chunk.js.map",
-    "static/js/3.35bd0177.chunk.js": "./static/js/3.35bd0177.chunk.js",
-    "static/js/3.35bd0177.chunk.js.map": "./static/js/3.35bd0177.chunk.js.map",
+    "main.css": "./static/css/main.63cc44c0.chunk.css",
+    "main.js": "./static/js/main.8086c8b4.chunk.js",
+    "main.js.map": "./static/js/main.8086c8b4.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.8c6d43da.js",
+    "runtime-main.js.map": "./static/js/runtime-main.8c6d43da.js.map",
+    "static/js/2.549b2f16.chunk.js": "./static/js/2.549b2f16.chunk.js",
+    "static/js/2.549b2f16.chunk.js.map": "./static/js/2.549b2f16.chunk.js.map",
+    "static/js/3.0d91c660.chunk.js": "./static/js/3.0d91c660.chunk.js",
+    "static/js/3.0d91c660.chunk.js.map": "./static/js/3.0d91c660.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.2cb1b48e.chunk.css.map": "./static/css/main.2cb1b48e.chunk.css.map",
-    "static/js/2.461ffeb4.chunk.js.LICENSE.txt": "./static/js/2.461ffeb4.chunk.js.LICENSE.txt",
-    "static/media/Game.scss": "./static/media/step-inactive.2bd1f67a.svg",
+    "static/css/main.63cc44c0.chunk.css.map": "./static/css/main.63cc44c0.chunk.css.map",
+    "static/js/2.549b2f16.chunk.js.LICENSE.txt": "./static/js/2.549b2f16.chunk.js.LICENSE.txt",
+    "static/media/Question.scss": "./static/media/answer-wrong.9948cae0.svg",
     "static/media/close-menu.f1510c4e.svg": "./static/media/close-menu.f1510c4e.svg",
     "static/media/like.ae778be2.svg": "./static/media/like.ae778be2.svg",
-    "static/media/open-menu.4cc3cba4.svg": "./static/media/open-menu.4cc3cba4.svg"
+    "static/media/open-menu.4cc3cba4.svg": "./static/media/open-menu.4cc3cba4.svg",
+    "static/media/Steps.scss": "./static/media/step-inactive.2bd1f67a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e1a3c8cf.js",
-    "static/js/2.461ffeb4.chunk.js",
-    "static/css/main.2cb1b48e.chunk.css",
-    "static/js/main.67715ddf.chunk.js"
+    "static/js/runtime-main.8c6d43da.js",
+    "static/js/2.549b2f16.chunk.js",
+    "static/css/main.63cc44c0.chunk.css",
+    "static/js/main.8086c8b4.chunk.js"
   ]
 }

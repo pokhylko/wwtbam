@@ -4,9 +4,9 @@
 
 ### `Instructions for installing and starting a project`
 
-1. git clone git@github.com:pokhylko/wwtbam.git
-2. npm install
-3. npm start
+1. clone repository `git clone git@github.com:pokhylko/wwtbam.git`
+2. install packages `npm install`
+3. run project in browser `npm start`
 
 ### `Answers`
 

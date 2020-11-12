@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Who wants to be a millionaire?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Link to the project](https://pokhylko.github.io/wwtbam/)
 
 ## Available Scripts
 
@@ -19,52 +19,40 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `Instructions for installing and starting a project`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. git clone git@github.com:pokhylko/wwtbam.git
+2. npm install
+3. npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Answers`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<details>
+<summary>Answers</summary>
+<div>
+  <h4>How many seconds are in an hour?</h4>
+  <p>3600</p>
+  <h4>Which video game system does Sony produce?</h4>
+  <p>PlayStation</p>
+  <h4>What city contains the Eiffel Tower?</h4>
+  <p>Paris</p>
+  <h4>Which sport is also known as football?</h4>
+  <p>Soccer</p>
+  <h4>How many continents are there?</h4>
+  <p>7</p>
+  <h4>Who wasn't a member of the Beatles?</h4>
+  <p>Justin Timberlake</p>
+  <h4>Which of the following is not a type of pasta?</h4>
+  <p>Escargot</p>
+  <h4>Which state has cities named San Francisco and Hollywood?</h4>
+  <p>California</p>
+  <h4>Which instrument does not have strings?</h4>
+  <p>Trombone</p>
+  <h4>What product does Tesla produce?</h4>
+  <p>Electric cars</p>
+  <h4>Which animal is not a primate?</h4>
+  <p>Dolphin</p>
+  <h4>What gas makes voices sound higher when inhaled?</h4>
+  <p>Helium</p>
+</div>
+</details>

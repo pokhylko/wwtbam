@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import openMenu from '../../images/open-menu.svg';
 import closeMenu from '../../images/close-menu.svg';
 
-const MobileMenu = ({ setShowStep }) => {
+const MobileMenu = ({ setHideSteps }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen((state) => !state);
-    setShowStep((state) => !state);
+    setHideSteps((state) => !state);
   };
 
   return (
@@ -30,7 +30,7 @@ const MobileMenu = ({ setShowStep }) => {
 };
 
 MobileMenu.propTypes = {
-  setShowStep: PropTypes.func.isRequired,
+  setHideSteps: PropTypes.func.isRequired,
 };
 
 export default MobileMenu;

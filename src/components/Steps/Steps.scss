@@ -1,0 +1,116 @@
+.game-steps {
+    display: flex;
+    background: #ffffff;
+    flex: 0 0 25%;
+    overflow-x: hidden;
+    padding: 6.4rem 0 3.2rem;
+    justify-content: flex-start;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    overflow-x: hidden;
+  }
+
+  &__step {
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.3rem;
+    text-align: center;
+    width: 24rem;
+    padding: 0.9rem 1rem 0.8rem;
+    position: relative;
+    background-size: cover;
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      top: calc(50% - 0.1rem);
+      position: absolute;
+      height: 0.1rem;
+      background-color: #d0d0d8;
+    }
+
+    &:before {
+      left: -100%;
+    }
+
+    &:after {
+      right: -100%;
+    }
+
+    &_inactive {
+      background-image: url(../../images/step-inactive.svg);
+      color: #1C1C21;
+
+      &:before,
+      &:after {
+        background-color: #d0d0d8;
+      }
+    }
+    
+    &_current {
+      background-image: url(../../images/step-current.svg);
+      color: #ff8b37;
+
+      &:before,
+      &:after {
+        background-color: #ff8b37;
+      }
+    }
+
+    &_finished {
+      background-image: url(../../images/step-finished.svg);
+      color: #d0d0d8;
+
+      &:before,
+      &:after {
+        background-color: #d0d0d8;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .game-steps {
+    position: absolute;
+    width: 100%;
+
+    &_mobile {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .game-step {
+    &__step {
+      padding: 0.4rem 1rem 0.5rem;
+      
+      &_inactive {
+        background-image: url(../../images/step-inactive-mobile.svg);
+      }
+      
+      &_current {
+        background-image: url(../../images/step-current-mobile.svg);
+      }
+
+      &_finished {
+        background-image: url(../../images/step-finished-mobile.svg);
+      }
+    }
+  }
+}

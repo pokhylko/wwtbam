@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Start from './screens/Start/Start';
-import Game from './screens/Game/Game';
+import Start from './components/Start/Start';
+import Game from './components/Game/Game';
 
 const App = () => {
   const [gameStart, setGameStart] = useState(false);

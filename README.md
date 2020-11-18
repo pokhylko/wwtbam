@@ -4,38 +4,81 @@
 
 ### `Instructions for installing and starting a project`
 
-1. git clone git@github.com:pokhylko/wwtbam.git
-2. npm install
-3. npm start
+1. clone repository `git clone git@github.com:pokhylko/wwtbam.git`
+2. install packages `npm install`
+3. run project in browser `npm start`
 
 ### `Answers`
 
 <details>
-<summary>Answers</summary>
-<div>
-  <h4>How many seconds are in an hour?</h4>
-  <p>3600</p>
-  <h4>Which video game system does Sony produce?</h4>
-  <p>PlayStation</p>
-  <h4>What city contains the Eiffel Tower?</h4>
-  <p>Paris</p>
-  <h4>Which sport is also known as football?</h4>
-  <p>Soccer</p>
-  <h4>How many continents are there?</h4>
-  <p>7</p>
-  <h4>Who wasn't a member of the Beatles?</h4>
-  <p>Justin Timberlake</p>
-  <h4>Which of the following is not a type of pasta?</h4>
-  <p>Escargot</p>
-  <h4>Which state has cities named San Francisco and Hollywood?</h4>
-  <p>California</p>
-  <h4>Which instrument does not have strings?</h4>
-  <p>Trombone</p>
-  <h4>What product does Tesla produce?</h4>
-  <p>Electric cars</p>
-  <h4>Which animal is not a primate?</h4>
-  <p>Dolphin</p>
-  <h4>What gas makes voices sound higher when inhaled?</h4>
-  <p>Helium</p>
-</div>
+  <summary>How many seconds are in an hour?</summary>
+  <div>
+    <p>3600</p>
+  </div>
+</details>
+<details>
+  <summary>Which video game system does Sony produce?</summary>
+  <div>
+    <p>PlayStation</p>
+  </div>
+</details>
+<details>
+  <summary>What city contains the Eiffel Tower?</summary>
+  <div>
+    <p>Paris</p>
+  </div>
+</details>
+<details>
+  <summary>Which sport is also known as football?</summary>
+  <div>
+    <p>Soccer</p>
+  </div>
+</details>
+<details>
+  <summary>How many continents are there?</summary>
+  <div>
+    <p>7</p>
+  </div>
+</details>
+<details>
+  <summary>Who wasn't a member of the Beatles?</summary>
+  <div>
+    <p>Justin Timberlake</p>
+  </div>
+</details>
+<details>
+  <summary>Which of the following is not a type of pasta?</summary>
+  <div>
+    <p>Escargot</p>
+  </div>
+</details>
+<details>
+  <summary>Which state has cities named San Francisco and Hollywood?</summary>
+  <div>
+    <p>California</p>
+  </div>
+</details>
+<details>
+  <summary>Which instrument does not have strings?</summary>
+  <div>
+    <p>Trombone</p>
+  </div>
+</details>
+<details>
+  <summary>What product does Tesla produce?</summary>
+  <div>
+    <p>Electric cars</p>
+  </div>
+</details>
+<details>
+  <summary>Which animal is not a primate?</summary>
+  <div>
+    <p>Dolphin</p>
+  </div>
+</details>
+<details>
+  <summary>What gas makes voices sound higher when inhaled?</summary>
+  <div>
+    <p>Helium</p>
+  </div>
 </details>

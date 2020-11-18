@@ -6,7 +6,6 @@
   padding: 10.5rem 8rem 8.5rem;
 
   &__title {
-    font-family: Inter;
     font-size: 3.2rem;
     font-style: normal;
     font-weight: 600;
@@ -21,19 +20,17 @@
   }
 
   &__button {
-    font-family: Inter;
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 2.3rem;
-    background-size: cover;
+    background-size: 100% 100%;
     padding: 2.6rem 3.3rem;
     background-image: url(../../images/answer-inactive.svg);
     text-align: left;
     position: relative;
     border: none;
     background-color: transparent;
-    transition: all 0.3s;
     width: 39rem;
     margin: 0 1.5rem 3.5rem;
 

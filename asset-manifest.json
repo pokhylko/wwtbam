@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.8b375014.chunk.css",
-    "main.js": "./static/js/main.e974030d.chunk.js",
-    "main.js.map": "./static/js/main.e974030d.chunk.js.map",
+    "main.css": "./static/css/main.1dec052f.chunk.css",
+    "main.js": "./static/js/main.e1e5e248.chunk.js",
+    "main.js.map": "./static/js/main.e1e5e248.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f3ae662c.js",
     "runtime-main.js.map": "./static/js/runtime-main.f3ae662c.js.map",
     "static/js/2.549b2f16.chunk.js": "./static/js/2.549b2f16.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.3cec500e.chunk.js": "./static/js/3.3cec500e.chunk.js",
     "static/js/3.3cec500e.chunk.js.map": "./static/js/3.3cec500e.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.8b375014.chunk.css.map": "./static/css/main.8b375014.chunk.css.map",
+    "static/css/main.1dec052f.chunk.css.map": "./static/css/main.1dec052f.chunk.css.map",
     "static/js/2.549b2f16.chunk.js.LICENSE.txt": "./static/js/2.549b2f16.chunk.js.LICENSE.txt",
     "static/media/Question.scss": "./static/media/answer-wrong.9948cae0.svg",
     "static/media/close-menu.f1510c4e.svg": "./static/media/close-menu.f1510c4e.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f3ae662c.js",
     "static/js/2.549b2f16.chunk.js",
-    "static/css/main.8b375014.chunk.css",
-    "static/js/main.e974030d.chunk.js"
+    "static/css/main.1dec052f.chunk.css",
+    "static/js/main.e1e5e248.chunk.js"
   ]
 }

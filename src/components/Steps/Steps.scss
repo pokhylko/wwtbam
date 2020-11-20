@@ -1,6 +1,6 @@
 .game-steps {
   display: flex;
-  background: #ffffff;
+  background: #fff;
   flex: 0 0 25%;
   overflow-x: hidden;
   padding: 6.4rem 0 3.2rem;
@@ -23,8 +23,8 @@
       margin-bottom: 0.8rem;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       content: "";
       display: block;
       width: 100%;
@@ -34,30 +34,30 @@
       background-color: #d0d0d8;
     }
 
-    &:before {
+    &::before {
       left: -100%;
     }
 
-    &:after {
+    &::after {
       right: -100%;
     }
 
     &_inactive {
       background-image: url(../../images/step-inactive.svg);
-      color: #1C1C21;
+      color: #1c1c21;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         background-color: #d0d0d8;
       }
     }
-    
+
     &_current {
       background-image: url(../../images/step-current.svg);
       color: #ff8b37;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         background-color: #ff8b37;
       }
     }
@@ -66,8 +66,8 @@
       background-image: url(../../images/step-finished.svg);
       color: #d0d0d8;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         background-color: #d0d0d8;
       }
     }
@@ -89,11 +89,11 @@
   .game-step {
     &__step {
       padding: 0.4rem 1rem 0.5rem;
-      
+
       &_inactive {
         background-image: url(../../images/step-inactive-mobile.svg);
       }
-      
+
       &_current {
         background-image: url(../../images/step-current-mobile.svg);
       }

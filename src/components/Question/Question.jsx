@@ -93,25 +93,25 @@ export const Question = ({
   }, [wrongAnswer]);
 
   return (
-    <div className="game-question">
-      <h2 className="game-question__title">{currentQuestion.question}</h2>
+    <div className="question">
+      <h2 className="question__title">{currentQuestion.question}</h2>
 
-      <div className="game-question__answers">
+      <div className="question__answers">
         {randomizeAnswers.map((answer, index) => (
           <button
             className={cn(
-              'game-question__button',
+              'question__button',
               {
-                'game-question__button_selected': answer === selectedAnswer,
-                'game-question__button_correct': answer === correctAnswer,
-                'game-question__button_wrong': answer === wrongAnswer,
+                'question__button--selected': answer === selectedAnswer,
+                'question__button--correct': answer === correctAnswer,
+                'question__button--wrong': answer === wrongAnswer,
               },
             )}
             type="button"
             key={answer}
             onClick={() => checkAnswer(answer)}
           >
-            <span className="game-question__button-letter">
+            <span className="question__button-letter">
               {configuration.letters[index]}
             </span>
             {answer}

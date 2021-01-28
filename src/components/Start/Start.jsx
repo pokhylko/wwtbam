@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import PropTypes from 'prop-types';
 import cn from 'classnames';
@@ -8,31 +8,31 @@ import './Start.scss';
 import like from '../../images/like.svg';
 
 export const Start = ({ setGameStart, gameOver, score }) => {
-  const startGame = () => {
+  const startGame = useCallback(() => {
     setGameStart(true);
-  };
+  }, []);
 
   return (
     <div className={cn(
-      'game-start',
-      { 'game-start_bg': !gameOver },
+      'start',
+      { 'start--bg': !gameOver },
     )}
     >
-      <div className="game-start__wrapper">
-        <img className="game-start__logo" src={like} alt="like" />
+      <div className="start__wrapper">
+        <img className="start__logo" src={like} alt="like" />
 
-        <div className="game-start__content">
+        <div className="start__content">
           {!gameOver ? (
-            <h1 className="game-start__title">Who wants to be a millionaire?</h1>
+            <h1 className="start__title">Who wants to be a millionaire?</h1>
           ) : (
-            <div className="game-start__score">
-              <h3 className="game-start__score-title">Total score:</h3>
-              <h2 className="game-start__title">{`$${score.toLocaleString()} earned`}</h2>
+            <div className="start__score">
+              <h2 className="start__score-title">Total score:</h2>
+              <h3 className="start__title">{`$${score.toLocaleString()} earned`}</h3>
             </div>
           )}
 
           <button
-            className="game-start__button"
+            className="start__button"
             type="button"
             onClick={startGame}
           >

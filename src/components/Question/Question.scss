@@ -1,4 +1,4 @@
-.game-question {
+.question {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +33,7 @@
     background-color: transparent;
     width: 39rem;
     margin: 0 1.5rem 3.5rem;
+    cursor: pointer;
 
     &-letter {
       color: #ff8b37;
@@ -67,8 +68,8 @@
       background-color: #ff8b37;
     }
 
-    &_selected,
-    &_selected:hover {
+    &--selected,
+    &--selected:hover {
       background-image: url(../../images/answer-selected.svg);
 
       &::before,
@@ -77,8 +78,8 @@
       }
     }
 
-    &_correct,
-    &_correct:hover {
+    &--correct,
+    &--correct:hover {
       background-image: url(../../images/answer-correct.svg);
 
       &::before,
@@ -89,8 +90,8 @@
       }
     }
 
-    &_wrong,
-    &_wrong:hover {
+    &--wrong,
+    &--wrong:hover {
       background-image: url(../../images/answer-wrong.svg);
 
       &::before,
@@ -100,11 +101,15 @@
         background-color: #ec6259;
       }
     }
+
+    &--inactive {
+      pointer-events: none;
+    }
   }
 }
 
 @media screen and (max-width: 1439px) and (min-width: 992px) {
-  .game-question {
+  .question {
     &__button {
       padding: 1.35rem 3.3rem;
       width: 26rem;
@@ -113,7 +118,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .game-question {
+  .question {
     flex: 0 0 100%;
     padding: 13.6rem 0 2.4rem;
     align-items: center;
@@ -135,7 +140,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  .game-question {
+  .question {
     &__title {
       font-size: 1.8rem;
       line-height: 2.088rem;

@@ -1,16 +1,19 @@
 import React from 'react';
-import './Start.scss';
+
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cn from 'classnames';
+
+import './Start.scss';
+
 import like from '../../images/like.svg';
 
-const Start = ({ setGameStart, gameOver, score }) => {
+export const Start = ({ setGameStart, gameOver, score }) => {
   const startGame = () => {
     setGameStart(true);
   };
 
   return (
-    <div className={classNames(
+    <div className={cn(
       'game-start',
       { 'game-start_bg': !gameOver },
     )}
@@ -46,5 +49,3 @@ Start.propTypes = {
   gameOver: PropTypes.bool.isRequired,
   score: PropTypes.number.isRequired,
 };
-
-export default Start;

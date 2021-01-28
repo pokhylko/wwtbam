@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import './App.scss';
-import Start from './components/Start/Start';
-import Game from './components/Game/Game';
 
-const App = () => {
+import { Start } from './components/Start';
+import { Game } from './components/Game';
+
+import './App.scss';
+
+export const App = () => {
   const [gameStart, setGameStart] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
@@ -26,5 +28,3 @@ const App = () => {
     </div>
   );
 };
-
-export default App;

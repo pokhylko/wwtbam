@@ -1,12 +1,15 @@
 import React, {
   useState, useEffect, useCallback, useMemo,
 } from 'react';
-import './Question.scss';
+
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cn from 'classnames';
+
+import './Question.scss';
+
 import configuration from '../../data/game-configuration.json';
 
-const Question = ({
+export const Question = ({
   currentStep, setCurrentStep, setGameStart, setGameOver, setScore,
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
@@ -96,7 +99,7 @@ const Question = ({
       <div className="game-question__answers">
         {randomizeAnswers.map((answer, index) => (
           <button
-            className={classNames(
+            className={cn(
               'game-question__button',
               {
                 'game-question__button_selected': answer === selectedAnswer,
@@ -131,5 +134,3 @@ Question.propTypes = {
   setGameOver: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
 };
-
-export default Question;

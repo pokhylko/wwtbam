@@ -1,20 +1,23 @@
 import React from 'react';
-import './Steps.scss';
+
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cn from 'classnames';
+
+import './Steps.scss';
+
 import configuration from '../../data/game-configuration.json';
 
 const reverseSteps = [...configuration.steps].reverse();
 
-const Steps = ({ currentStep, hideSteps }) => (
-  <div className={classNames(
+export const Steps = ({ currentStep, hideSteps }) => (
+  <div className={cn(
     'game-steps',
     { 'game-steps_mobile': hideSteps },
   )}
   >
     {reverseSteps.map((step) => (
       <div
-        className={classNames(
+        className={cn(
           'game-steps__step',
           {
             'game-steps__step_inactive': step > configuration.steps[currentStep],
@@ -34,5 +37,3 @@ Steps.propTypes = {
   currentStep: PropTypes.number.isRequired,
   hideSteps: PropTypes.bool.isRequired,
 };
-
-export default Steps;

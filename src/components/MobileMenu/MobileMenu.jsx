@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import './MobileMenu.scss';
+
 import PropTypes from 'prop-types';
+
+import './MobileMenu.scss';
+
 import openMenu from '../../images/open-menu.svg';
 import closeMenu from '../../images/close-menu.svg';
 
-const MobileMenu = ({ setHideSteps }) => {
+export const MobileMenu = ({ setHideSteps }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -32,5 +35,3 @@ const MobileMenu = ({ setHideSteps }) => {
 MobileMenu.propTypes = {
   setHideSteps: PropTypes.func.isRequired,
 };
-
-export default MobileMenu;

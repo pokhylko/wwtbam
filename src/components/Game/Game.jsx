@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import './Game.scss';
-import PropTypes from 'prop-types';
-import MobileMenu from '../MobileMenu/MobileMenu';
-import Question from '../Question/Question';
-import Steps from '../Steps/Steps';
 
-const Game = ({ setGameStart, setGameOver, setScore }) => {
+import PropTypes from 'prop-types';
+
+import { MobileMenu } from '../MobileMenu';
+import { Question } from '../Question';
+import { Steps } from '../Steps';
+
+import './Game.scss';
+
+export const Game = ({ setGameStart, setGameOver, setScore }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [hideSteps, setHideSteps] = useState(true);
 
@@ -36,5 +39,3 @@ Game.propTypes = {
   setGameOver: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
 };
-
-export default Game;

@@ -15,6 +15,7 @@ export const Question = ({
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [correctAnswer, setCorrectAnswer] = useState('');
   const [wrongAnswer, setWrongAnswer] = useState('');
+  const [isAnswered, setIsAnswered] = useState(false);
   const currentQuestion = configuration.questions[currentStep];
   const randomizeAnswers = useMemo(() => currentQuestion.answers
     .sort(() => Math.random() - 0.5), [currentQuestion]);
@@ -23,6 +24,7 @@ export const Question = ({
     let timerWrong;
     let timerCorrect;
     setSelectedAnswer(answer);
+    setIsAnswered(true);
 
     if (answer !== currentQuestion.correct) {
       timerWrong = setTimeout(() => {
@@ -68,6 +70,7 @@ export const Question = ({
         setCurrentStep((state) => state + 1);
         setCorrectAnswer('');
         setSelectedAnswer('');
+        setIsAnswered(false);
       }, 1500);
     }
 
@@ -105,6 +108,7 @@ export const Question = ({
                 'question__button--selected': answer === selectedAnswer,
                 'question__button--correct': answer === correctAnswer,
                 'question__button--wrong': answer === wrongAnswer,
+                'question__button--inactive': isAnswered,
               },
             )}
             type="button"
@@ -124,13 +128,17 @@ export const Question = ({
 
 Question.propTypes = {
   currentQuestion: PropTypes.shape({
-    question: PropTypes.string.isRequired,
-    answers: PropTypes.arrayOf(PropTypes.string).isRequired,
-    correct: PropTypes.string.isRequired,
-  }).isRequired,
+    question: PropTypes.string,
+    answers: PropTypes.arrayOf(PropTypes.string),
+    correct: PropTypes.string,
+  }),
   currentStep: PropTypes.number.isRequired,
   setCurrentStep: PropTypes.func.isRequired,
   setGameStart: PropTypes.func.isRequired,
   setGameOver: PropTypes.func.isRequired,
   setScore: PropTypes.func.isRequired,
+};
+
+Question.defaultProps = {
+  currentQuestion: {},
 };

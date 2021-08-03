@@ -2,12 +2,12 @@
   position: absolute;
   top: 20px;
   right: 20px;
+}
 
-  &__button {
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
+.mobile-menu__button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 992px) {

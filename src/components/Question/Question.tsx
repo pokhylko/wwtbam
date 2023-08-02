@@ -1,28 +1,43 @@
-import React, {
-  useState, useEffect, useCallback, useMemo,
+import {
+  useState, useEffect, useCallback, useMemo, FC, Dispatch, SetStateAction,
 } from 'react';
 
-import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './Question.scss';
 
 import configuration from '../../data/game-configuration.json';
 
-export const Question = ({
-  currentStep, setCurrentStep, setGameStart, setGameOver, setScore,
+type CurrentQuestion = {
+  question: string;
+  answers: string[];
+  correct: string;
+};
+
+type Props = {
+  currentStep: number;
+  setCurrentStep: Dispatch<SetStateAction<number>>;
+  setIsGameStart: Dispatch<SetStateAction<boolean>>;
+  setIsGameOver: Dispatch<SetStateAction<boolean>>;
+  setScore: Dispatch<SetStateAction<number>>;
+};
+
+export const Question: FC<Props> = ({
+  currentStep, setCurrentStep, setIsGameStart, setIsGameOver, setScore,
 }) => {
-  const [selectedAnswer, setSelectedAnswer] = useState('');
-  const [correctAnswer, setCorrectAnswer] = useState('');
-  const [wrongAnswer, setWrongAnswer] = useState('');
-  const [isAnswered, setIsAnswered] = useState(false);
-  const currentQuestion = configuration.questions[currentStep];
-  const randomizeAnswers = useMemo(() => currentQuestion.answers
+  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
+  const [correctAnswer, setCorrectAnswer] = useState<string>('');
+  const [wrongAnswer, setWrongAnswer] = useState<string>('');
+  const [isAnswered, setIsAnswered] = useState<boolean>(false);
+
+  const currentQuestion: CurrentQuestion = configuration.questions[currentStep];
+  const randomizeAnswers: string[] = useMemo(() => currentQuestion.answers
     .sort(() => Math.random() - 0.5), [currentQuestion]);
 
-  const checkAnswer = useCallback((answer) => {
-    let timerWrong;
-    let timerCorrect;
+  const checkAnswer = useCallback((answer: string) => {
+    let timerWrong: NodeJS.Timeout;
+    let timerCorrect: NodeJS.Timeout;
+
     setSelectedAnswer(answer);
     setIsAnswered(true);
 
@@ -42,24 +57,24 @@ export const Question = ({
       clearTimeout(timerWrong);
       clearTimeout(timerCorrect);
     };
-  }, [currentStep]);
+  }, [currentQuestion.correct]);
 
-  const gameScore = (finishStep) => {
+  const gameScore = useCallback((finishStep: number) => {
     if (finishStep === 0) {
       setScore(0);
     } else {
       setScore(configuration.steps[finishStep - 1]);
     }
-  };
+  }, [setScore]);
 
-  const gameOver = (finishStep) => {
+  const gameOver = useCallback((finishStep: number) => {
     gameScore(finishStep);
-    setGameStart(false);
-    setGameOver(true);
-  };
+    setIsGameStart(false);
+    setIsGameOver(true);
+  }, [gameScore, setIsGameOver, setIsGameStart]);
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout;
 
     if (correctAnswer) {
       timer = setTimeout(() => {
@@ -77,10 +92,10 @@ export const Question = ({
     return () => {
       clearTimeout(timer);
     };
-  }, [correctAnswer]);
+  }, [correctAnswer, currentStep, gameOver, setCurrentStep]);
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout;
 
     if (wrongAnswer) {
       timer = setTimeout(() => {
@@ -93,7 +108,7 @@ export const Question = ({
     return () => {
       clearTimeout(timer);
     };
-  }, [wrongAnswer]);
+  }, [currentStep, gameOver, wrongAnswer]);
 
   return (
     <div className="question">
@@ -124,21 +139,4 @@ export const Question = ({
       </div>
     </div>
   );
-};
-
-Question.propTypes = {
-  currentQuestion: PropTypes.shape({
-    question: PropTypes.string,
-    answers: PropTypes.arrayOf(PropTypes.string),
-    correct: PropTypes.string,
-  }),
-  currentStep: PropTypes.number.isRequired,
-  setCurrentStep: PropTypes.func.isRequired,
-  setGameStart: PropTypes.func.isRequired,
-  setGameOver: PropTypes.func.isRequired,
-  setScore: PropTypes.func.isRequired,
-};
-
-Question.defaultProps = {
-  currentQuestion: {},
 };

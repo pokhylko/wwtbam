@@ -1,6 +1,5 @@
-import React from 'react';
+import { FC } from 'react';
 
-import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './Steps.scss';
@@ -9,10 +8,15 @@ import configuration from '../../data/game-configuration.json';
 
 const reverseSteps = [...configuration.steps].reverse();
 
-export const Steps = ({ currentStep, hideSteps }) => (
+type Props = {
+  currentStep: number;
+  isHideSteps: boolean;
+};
+
+export const Steps: FC<Props> = ({ currentStep, isHideSteps }) => (
   <div className={cn(
     'game-steps',
-    { 'game-steps--mobile': hideSteps },
+    { 'game-steps--mobile': isHideSteps },
   )}
   >
     {reverseSteps.map((step) => (
@@ -32,8 +36,3 @@ export const Steps = ({ currentStep, hideSteps }) => (
     ))}
   </div>
 );
-
-Steps.propTypes = {
-  currentStep: PropTypes.number.isRequired,
-  hideSteps: PropTypes.bool.isRequired,
-};

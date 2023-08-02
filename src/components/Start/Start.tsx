@@ -1,28 +1,35 @@
-import React, { useCallback } from 'react';
+import {
+  Dispatch, FC, SetStateAction, useCallback,
+} from 'react';
 
-import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import './Start.scss';
 
 import like from '../../images/like.svg';
 
-export const Start = ({ setGameStart, gameOver, score }) => {
+type Props = {
+  isGameOver: boolean;
+  score: number;
+  setIsGameStart: Dispatch<SetStateAction<boolean>>;
+};
+
+export const Start: FC<Props> = ({ isGameOver, score, setIsGameStart }) => {
   const startGame = useCallback(() => {
-    setGameStart(true);
-  }, []);
+    setIsGameStart(true);
+  }, [setIsGameStart]);
 
   return (
     <div className={cn(
       'start',
-      { 'start--bg': !gameOver },
+      { 'start--bg': !isGameOver },
     )}
     >
       <div className="start__wrapper">
         <img className="start__logo" src={like} alt="like" />
 
         <div className="start__content">
-          {!gameOver ? (
+          {!isGameOver ? (
             <h1 className="start__title">Who wants to be a millionaire?</h1>
           ) : (
             <div className="start__score">
@@ -42,10 +49,4 @@ export const Start = ({ setGameStart, gameOver, score }) => {
       </div>
     </div>
   );
-};
-
-Start.propTypes = {
-  setGameStart: PropTypes.func.isRequired,
-  gameOver: PropTypes.bool.isRequired,
-  score: PropTypes.number.isRequired,
 };

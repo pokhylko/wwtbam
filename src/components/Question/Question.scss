@@ -99,6 +99,7 @@
   }
 
   &--inactive {
+    cursor: default;
     pointer-events: none;
   }
 }

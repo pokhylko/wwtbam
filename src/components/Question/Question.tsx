@@ -1,106 +1,63 @@
 import {
-  useState, useEffect, useCallback, useMemo, FC, Dispatch, SetStateAction,
+  useState, useEffect, useCallback, FC,
 } from 'react';
 
 import cn from 'classnames';
 
+import { useAppDispatch, useAppSelector } from 'src/store/hooks';
+
+import { Answer, QuestionType } from 'src/types';
+
+import { finishedGame, increaseCurrentStep, setScore } from '../Game/GameSlice';
+
 import './Question.scss';
 
-import configuration from '../../data/game-configuration.json';
+export const Question: FC = () => {
+  const dispatch = useAppDispatch();
+  const { currentStep, questions } = useAppSelector((state) => state.game);
 
-type CurrentQuestion = {
-  question: string;
-  answers: string[];
-  correct: string;
-};
+  const [selectedAnswer, setSelectedAnswer] = useState<Answer | null>(null);
+  const [isAnswerCorrected, setIsAnswerCorrected] = useState<boolean | null>(null);
 
-type Props = {
-  currentStep: number;
-  setCurrentStep: Dispatch<SetStateAction<number>>;
-  setIsGameStart: Dispatch<SetStateAction<boolean>>;
-  setIsGameOver: Dispatch<SetStateAction<boolean>>;
-  setScore: Dispatch<SetStateAction<number>>;
-};
+  const currentQuestion: QuestionType = questions[currentStep];
 
-export const Question: FC<Props> = ({
-  currentStep, setCurrentStep, setIsGameStart, setIsGameOver, setScore,
-}) => {
-  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
-  const [correctAnswer, setCorrectAnswer] = useState<string>('');
-  const [wrongAnswer, setWrongAnswer] = useState<string>('');
-  const [isAnswered, setIsAnswered] = useState<boolean>(false);
-
-  const currentQuestion: CurrentQuestion = configuration.questions[currentStep];
-  const randomizeAnswers: string[] = useMemo(() => currentQuestion.answers
-    .sort(() => Math.random() - 0.5), [currentQuestion]);
-
-  const checkAnswer = useCallback((answer: string) => {
-    let timerWrong: NodeJS.Timeout;
-    let timerCorrect: NodeJS.Timeout;
-
+  const handleAnswer = (answer: Answer) => {
     setSelectedAnswer(answer);
-    setIsAnswered(true);
 
-    if (answer !== currentQuestion.correct) {
-      timerWrong = setTimeout(() => {
-        setWrongAnswer(answer);
-      }, 1000);
-    }
-
-    if (answer === currentQuestion.correct) {
-      timerCorrect = setTimeout(() => {
-        setCorrectAnswer(answer);
-      }, 1000);
-    }
-
-    return () => {
-      clearTimeout(timerWrong);
-      clearTimeout(timerCorrect);
-    };
-  }, [currentQuestion.correct]);
+    setTimeout(() => {
+      setIsAnswerCorrected(answer.isCorrected);
+    }, 1000);
+  };
 
   const gameScore = useCallback((finishStep: number) => {
     if (finishStep === 0) {
-      setScore(0);
+      dispatch(setScore(0));
     } else {
-      setScore(configuration.steps[finishStep - 1]);
+      dispatch(setScore(questions[finishStep - 1].prize));
     }
-  }, [setScore]);
+  }, [dispatch, questions]);
 
   const gameOver = useCallback((finishStep: number) => {
     gameScore(finishStep);
-    setIsGameStart(false);
-    setIsGameOver(true);
-  }, [gameScore, setIsGameOver, setIsGameStart]);
+    dispatch(finishedGame());
+  }, [dispatch, gameScore]);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
-    if (correctAnswer) {
+    if (isAnswerCorrected) {
       timer = setTimeout(() => {
-        if (currentStep === configuration.questions.length - 1) {
+        if (currentStep === questions.length - 1) {
           gameOver(currentStep + 1);
         }
 
-        setCurrentStep((state) => state + 1);
-        setCorrectAnswer('');
-        setSelectedAnswer('');
-        setIsAnswered(false);
+        dispatch(increaseCurrentStep());
+        setSelectedAnswer(null);
+        setIsAnswerCorrected(null);
       }, 1500);
-    }
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [correctAnswer, currentStep, gameOver, setCurrentStep]);
-
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-
-    if (wrongAnswer) {
+    } else if (isAnswerCorrected === false) {
       timer = setTimeout(() => {
-        setWrongAnswer('');
-        setSelectedAnswer('');
+        setIsAnswerCorrected(null);
         gameOver(currentStep);
       }, 1500);
     }
@@ -108,32 +65,32 @@ export const Question: FC<Props> = ({
     return () => {
       clearTimeout(timer);
     };
-  }, [currentStep, gameOver, wrongAnswer]);
+  }, [currentStep, dispatch, gameOver, isAnswerCorrected, questions.length]);
 
   return (
     <div className="question">
       <h2 className="question__title">{currentQuestion.question}</h2>
 
       <div className="question__answers">
-        {randomizeAnswers.map((answer, index) => (
+        {currentQuestion.answers.map((answer) => (
           <button
             className={cn(
               'question__button',
               {
-                'question__button--selected': answer === selectedAnswer,
-                'question__button--correct': answer === correctAnswer,
-                'question__button--wrong': answer === wrongAnswer,
-                'question__button--inactive': isAnswered,
+                'question__button--correct': selectedAnswer?.option === answer.option && isAnswerCorrected,
+                'question__button--wrong': selectedAnswer?.option === answer.option && isAnswerCorrected === false,
+                'question__button--selected': selectedAnswer?.option === answer.option,
+                'question__button--inactive': selectedAnswer,
               },
             )}
             type="button"
-            key={answer}
-            onClick={() => checkAnswer(answer)}
+            key={answer.id}
+            onClick={() => handleAnswer(answer)}
           >
             <span className="question__button-letter">
-              {configuration.letters[index]}
+              {answer.id}
             </span>
-            {answer}
+            {answer.option}
           </button>
         ))}
       </div>

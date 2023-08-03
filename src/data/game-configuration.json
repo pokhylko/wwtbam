@@ -1,68 +1,300 @@
+[{
+  "id": 1,
+  "question": "How many seconds are in an hour?",
+  "answers": [{
+    "id": "A",
+    "option": "1000",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "2345",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option":  "3600",
+    "isCorrected": true
+  },
+  {
+    "id": "D",
+    "option": "6300",
+    "isCorrected": false
+  }],
+  "prize": 500
+},
 {
-  "steps": [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000],
-
-  "letters": ["A", "B", "C", "D"],
-
-  "questions": [
-    {
-      "question": "How many seconds are in an hour?",
-      "answers": ["1000", "2345", "3600", "6300"],
-      "correct": "3600"
-    },
-    {
-      "question": "Which video game system does Sony produce?",
-      "answers": ["Xbox", "Atari", "Game Boy", "PlayStation"],
-      "correct": "PlayStation"
-    },
-    {
-      "question": "What city contains the Eiffel Tower?",
-      "answers": ["Sydney", "Las Angeles", "New York City", "Paris"],
-      "correct": "Paris"
-    },
-    {
-      "question": "Which sport is also known as football?",
-      "answers": ["Soccer", "Basketball", "Baseball", "Cricket"],
-      "correct": "Soccer"
-    },
-    {
-      "question": "How many continents are there?",
-      "answers": ["5", "6", "7", "8"],
-      "correct": "7"
-    },
-    {
-      "question": "Who wasn't a member of the Beatles?",
-      "answers": ["John Lennon", "Paul McCartney", "Ringo Star", "Justin Timberlake"],
-      "correct": "Justin Timberlake"
-    },
-    {
-      "question": "Which of the following is not a type of pasta?",
-      "answers": ["Spaghetti", "Escargot", "Fettuccine", "Ziti"],
-      "correct": "Escargot"
-    },
-    {
-      "question": "Which state has cities named San Francisco and Hollywood?",
-      "answers": ["California", "Utah", "Hawaii", "Montana"],
-      "correct": "California"
-    },
-    {
-      "question": "Which instrument does not have strings?",
-      "answers": ["Guitar", "Bass", "Trombone", "Cello"],
-      "correct": "Trombone"
-    },
-    {
-      "question": "What product does Tesla produce?",
-      "answers": ["Ice cream", "Televisions", "Hair brushes", "Electric cars"],
-      "correct": "Electric cars"
-    },
-    {
-      "question": "Which animal is not a primate?",
-      "answers": ["Chimpanzee", "Dolphin", "Gorillla", "Orangutan"],
-      "correct": "Dolphin"
-    },
-    {
-      "question": "What gas makes voices sound higher when inhaled?",
-      "answers": ["Oxygen", "Nitrogen", "Sulfur Hexafluoride", "Helium"],
-      "correct": "Helium"
-    }
-  ]
-}
+  "id": 2,
+  "question": "Which video game system does Sony produce?",
+  "answers": [{
+    "id": "A",
+    "option": "Xbox",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Atari",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Game Boy",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "PlayStation",
+    "isCorrected": true
+  }],
+  "prize": 1000
+},
+{
+  "id": 3,
+  "question": "What city contains the Eiffel Tower?",
+  "answers": [{
+    "id": "A",
+    "option": "Sydney",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Los Angeles",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "New York City",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Paris",
+    "isCorrected": true
+  }],
+  "prize": 2000
+},
+{
+  "id": 4,
+  "question": "Which sport is also known as football?",
+  "answers": [{
+    "id": "A",
+    "option": "Soccer",
+    "isCorrected": true
+  },
+  {
+    "id": "B",
+    "option": "Basketball",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Baseball",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Cricket",
+    "isCorrected": false
+  }],
+  "prize": 4000
+},
+{
+  "id": 5,
+  "question": "How many continents are there?",
+  "answers": [{
+    "id": "A",
+    "option": "5",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "6",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "7",
+    "isCorrected": true
+  },
+  {
+    "id": "D",
+    "option": "8",
+    "isCorrected": false
+  }],
+  "prize": 8000
+},
+{
+  "id": 6,
+  "question": "Who wasn't a member of the Beatles?",
+  "answers": [{
+    "id": "A",
+    "option": "John Lennon",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Paul McCartney",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Ringo Star",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Justin Timberlake",
+    "isCorrected": true
+  }],
+  "prize": 16000
+},
+{
+  "id": 7,
+  "question": "Which of the following is not a type of pasta?",
+  "answers": [{
+    "id": "A",
+    "option": "Spaghetti",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Escargot",
+    "isCorrected": true
+  },
+  {
+    "id": "C",
+    "option": "Fettuccine",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Ziti",
+    "isCorrected": false
+  }],
+  "prize": 32000
+},
+{
+  "id": 8,
+  "question": "Which state has cities named San Francisco and Hollywood?",
+  "answers": [{
+    "id": "A",
+    "option": "California",
+    "isCorrected": true
+  },
+  {
+    "id": "B",
+    "option": "Utah",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Hawaii",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Montana",
+    "isCorrected": false
+  }],
+  "prize": 64000
+},
+{
+  "id": 9,
+  "question": "Which instrument does not have strings?",
+  "answers": [{
+    "id": "A",
+    "option": "Guitar",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Bass",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Trombone",
+    "isCorrected": true
+  },
+  {
+    "id": "D",
+    "option": "Cello",
+    "isCorrected": false
+  }],
+  "prize": 125000
+},
+{
+  "id": 10,
+  "question": "What product does Tesla produce?",
+  "answers": [{
+    "id": "A",
+    "option": "Ice cream",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Televisions",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Hair brushes",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Electric cars",
+    "isCorrected": true
+  }],
+  "prize": 250000
+},
+{
+  "id": 11,
+  "question": "Which animal is not a primate?",
+  "answers": [{
+    "id": "A",
+    "option": "Chimpanzee",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Dolphin",
+    "isCorrected": true
+  },
+  {
+    "id": "C",
+    "option": "Gorillla",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Orangutan",
+    "isCorrected": false
+  }],
+  "prize": 500000
+},
+{
+  "id": 12,
+  "question": "What gas makes voices sound higher when inhaled?",
+  "answers": [{
+    "id": "A",
+    "option": "Oxygen",
+    "isCorrected": false
+  },
+  {
+    "id": "B",
+    "option": "Nitrogen",
+    "isCorrected": false
+  },
+  {
+    "id": "C",
+    "option": "Sulfur Hexafluoride",
+    "isCorrected": false
+  },
+  {
+    "id": "D",
+    "option": "Helium",
+    "isCorrected": true
+  }],
+  "prize": 1000000
+}]

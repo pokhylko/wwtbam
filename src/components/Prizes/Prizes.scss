@@ -1,4 +1,4 @@
-.game-steps {
+.prizes {
   display: grid;
   place-items: center;
   row-gap: 0.8rem;
@@ -7,7 +7,7 @@
   padding: 6.4rem 5rem 3.2rem;
 }
 
-.game-steps__step {
+.prizes__step {
   display: grid;
   font-size: 2rem;
   font-style: normal;
@@ -70,7 +70,7 @@
 }
 
 @media screen and (max-width: 991px) {
-  .game-steps {
+  .prizes {
     position: absolute;
     width: 100%;
 
@@ -81,8 +81,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .game-step,
-  .game-steps__step {
+  .prizes,
+  .prizes__step {
     padding: 0.4rem 1rem 0.5rem;
 
     &--inactive {

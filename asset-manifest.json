@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.af2538df.chunk.css",
-    "main.js": "./static/js/main.74f8e83c.chunk.js",
-    "main.js.map": "./static/js/main.74f8e83c.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.f3ae662c.js",
-    "runtime-main.js.map": "./static/js/runtime-main.f3ae662c.js.map",
-    "static/js/2.549b2f16.chunk.js": "./static/js/2.549b2f16.chunk.js",
-    "static/js/2.549b2f16.chunk.js.map": "./static/js/2.549b2f16.chunk.js.map",
-    "static/js/3.3cec500e.chunk.js": "./static/js/3.3cec500e.chunk.js",
-    "static/js/3.3cec500e.chunk.js.map": "./static/js/3.3cec500e.chunk.js.map",
+    "main.css": "./static/css/main.84ba6552.css",
+    "main.js": "./static/js/main.dcefe558.js",
+    "static/media/like.svg": "./static/media/like.ae778be2545d339186d7f27827d5ba72.svg",
+    "static/media/close-menu.svg": "./static/media/close-menu.18ab20331d112f83989d353229123c80.svg",
     "index.html": "./index.html",
-    "static/css/main.af2538df.chunk.css.map": "./static/css/main.af2538df.chunk.css.map",
-    "static/js/2.549b2f16.chunk.js.LICENSE.txt": "./static/js/2.549b2f16.chunk.js.LICENSE.txt",
-    "static/media/Question.scss": "./static/media/answer-wrong.9948cae0.svg",
-    "static/media/close-menu.f1510c4e.svg": "./static/media/close-menu.f1510c4e.svg",
-    "static/media/like.ae778be2.svg": "./static/media/like.ae778be2.svg",
-    "static/media/open-menu.4cc3cba4.svg": "./static/media/open-menu.4cc3cba4.svg",
-    "static/media/Steps.scss": "./static/media/step-inactive.2bd1f67a.svg"
+    "static/media/open-menu.svg": "./static/media/open-menu.9dd15069959872216e72ab05c50eb2a7.svg",
+    "static/media/answer-correct.svg": "./static/media/answer-correct.2912238777121813f7ea.svg",
+    "static/media/answer-selected.svg": "./static/media/answer-selected.7e5aaa8bcad5dc1bdd73.svg",
+    "static/media/answer-wrong.svg": "./static/media/answer-wrong.9948cae014ced84605e2.svg",
+    "static/media/answer-hover.svg": "./static/media/answer-hover.226e9422b964ffa65c88.svg",
+    "static/media/answer-inactive.svg": "./static/media/answer-inactive.157d72dbd2507c832dec.svg",
+    "static/media/step-current.svg": "./static/media/step-current.e37086086c72e3c110e1.svg",
+    "static/media/step-finished.svg": "./static/media/step-finished.2bd1f67a95d37bbcb077.svg",
+    "static/media/step-inactive.svg": "./static/media/step-inactive.2bd1f67a95d37bbcb077.svg",
+    "static/media/step-current-mobile.svg": "./static/media/step-current-mobile.60bd6ac34cb5b5e81f0d.svg",
+    "static/media/step-finished-mobile.svg": "./static/media/step-finished-mobile.5909fa69ca4a63d83548.svg",
+    "static/media/step-inactive-mobile.svg": "./static/media/step-inactive-mobile.5909fa69ca4a63d83548.svg",
+    "main.84ba6552.css.map": "./static/css/main.84ba6552.css.map",
+    "main.dcefe558.js.map": "./static/js/main.dcefe558.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3ae662c.js",
-    "static/js/2.549b2f16.chunk.js",
-    "static/css/main.af2538df.chunk.css",
-    "static/js/main.74f8e83c.chunk.js"
+    "static/css/main.84ba6552.css",
+    "static/js/main.dcefe558.js"
   ]
 }

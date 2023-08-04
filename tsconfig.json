@@ -36,7 +36,8 @@
     },
     "include": [
       "src/**/*",
-      "custom.d.ts"
+      "custom.d.ts",
+      "css-modules.d.ts"
     ],
     "exclude": [
       "node_modules",

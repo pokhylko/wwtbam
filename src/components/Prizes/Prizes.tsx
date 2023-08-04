@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import { useAppSelector } from 'src/store/hooks';
 
-import './Prizes.scss';
+import styles from './Prizes.module.scss';
 
 type Props = {
   isHideSteps: boolean;
@@ -22,25 +22,27 @@ export const Prizes: FC<Props> = ({ isHideSteps }) => {
 
   return (
     <div className={cn(
-      'prizes',
-      { 'prizes--mobile': isHideSteps },
+      styles.Prizes,
+      { [styles.Prizes___mobile]: isHideSteps },
     )}
     >
-      {reversePrizes.map((prize) => (
-        <div
-          className={cn(
-            'prizes__step',
-            {
-              'prizes__step--inactive': prize > currentPrize,
-              'prizes__step--current': prize === currentPrize,
-              'prizes__step--finished': prize < currentPrize,
-            },
-          )}
-          key={prize}
-        >
-          {`$${prize.toLocaleString()}`}
-        </div>
-      ))}
+      <div className={styles.Prizes_steps}>
+        {reversePrizes.map((prize) => (
+          <div
+            className={cn(
+              styles.Prizes_step,
+              {
+                [styles.Prizes_step___inactive]: prize > currentPrize,
+                [styles.Prizes_step___current]: prize === currentPrize,
+                [styles.Prizes_step___finished]: prize < currentPrize,
+              },
+            )}
+            key={prize}
+          >
+            {`$${prize.toLocaleString()}`}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

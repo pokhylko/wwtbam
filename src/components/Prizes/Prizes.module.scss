@@ -1,14 +1,26 @@
-.prizes {
-  display: grid;
-  place-items: center;
-  row-gap: 0.8rem;
+@import "../../styles/colors.scss";
+
+.Prizes {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   overflow-x: hidden;
   padding: 6.4rem 5rem 3.2rem;
 }
 
-.prizes__step {
-  display: grid;
+.Prizes_steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  row-gap: 0.8rem;
+}
+
+.Prizes_step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -16,8 +28,10 @@
   place-items: center;
   width: 240px;
   height: 40px;
+  min-height: 40px;
   position: relative;
   background-size: 100%;
+  background-repeat: no-repeat;
 
   &::before,
   &::after {
@@ -27,7 +41,7 @@
     top: calc(50% - 0.1rem);
     position: absolute;
     height: 0.1rem;
-    background-color: #d0d0d8;
+    background-color: $black-40;
   }
 
   &::before {
@@ -38,62 +52,63 @@
     right: -100%;
   }
 
-  &--inactive {
+  &___inactive {
     background-image: url(../../images/step-inactive.svg);
-    color: #1c1c21;
+    color: $black-100;
 
     &::before,
     &::after {
-      background-color: #d0d0d8;
+      background-color: $black-40;
     }
   }
 
-  &--current {
+  &___current {
     background-image: url(../../images/step-current.svg);
-    color: #ff8b37;
+    color: $orange-100;
 
     &::before,
     &::after {
-      background-color: #ff8b37;
+      background-color: $orange-100;
     }
   }
 
-  &--finished {
+  &___finished {
     background-image: url(../../images/step-finished.svg);
-    color: #d0d0d8;
+    color: $black-40;
 
     &::before,
     &::after {
-      background-color: #d0d0d8;
+      background-color: $black-40;
     }
   }
 }
 
 @media screen and (max-width: 991px) {
-  .prizes {
+  .Prizes {
     position: absolute;
     width: 100%;
+    background-color: $black-5;
 
-    &--mobile {
+    &___mobile {
       display: none;
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  .prizes,
-  .prizes__step {
+  .Prizes,
+  .Prizes_step {
     padding: 0.4rem 1rem 0.5rem;
 
-    &--inactive {
+    &___inactive {
       background-image: url(../../images/step-inactive-mobile.svg);
     }
 
-    &--current {
+    &___current {
       background-image: url(../../images/step-current-mobile.svg);
     }
 
-    &--finished {
+    &___finished {
       background-image: url(../../images/step-finished-mobile.svg);
     }
   }

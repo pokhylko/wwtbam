@@ -4,14 +4,14 @@ import { MobileMenu } from '../MobileMenu';
 import { Question } from '../Question';
 import { Prizes } from '../Prizes';
 
-import './Game.scss';
+import styles from './Game.module.scss';
 
 export const Game: FC = () => {
   const [isHideSteps, setIsHideSteps] = useState<boolean>(true);
 
   return (
-    <div className="game-field">
-      <div className="game-field__wrapper">
+    <div className={styles.Game}>
+      <div className={styles.Game_wrapper}>
         <Question />
 
         <Prizes isHideSteps={isHideSteps} />

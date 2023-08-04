@@ -2,7 +2,7 @@ import {
   Dispatch, FC, SetStateAction, useState,
 } from 'react';
 
-import './MobileMenu.scss';
+import styles from './MobileMenu.module.scss';
 
 import { ReactComponent as OpenMenu } from '../../images/open-menu.svg';
 import { ReactComponent as CloseMenu } from '../../images/close-menu.svg';
@@ -20,9 +20,9 @@ export const MobileMenu: FC<Props> = ({ setIsHideSteps }) => {
   };
 
   return (
-    <div className="mobile-menu">
+    <div className={styles.MobileMenu}>
       <button
-        className="mobile-menu__button"
+        className={styles.MobileMenu_button}
         type="button"
         onClick={handleClick}
       >

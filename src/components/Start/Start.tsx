@@ -2,10 +2,11 @@ import { FC } from 'react';
 
 import cn from 'classnames';
 
-import './Start.scss';
-
 import { useAppDispatch, useAppSelector } from 'src/store/hooks';
+
 import { startedGame } from '../Game/GameSlice';
+
+import styles from './Start.module.scss';
 
 import like from '../../images/like.svg';
 
@@ -20,27 +21,27 @@ export const Start: FC = () => {
 
   return (
     <div className={cn(
-      'start',
-      { 'start--bg': gameStatus !== 'started' },
+      styles.Start,
+      { [styles.Start___bg]: gameStatus !== 'started' },
     )}
     >
-      <div className="start__wrapper">
-        <img className="start__logo" src={like} alt="like" />
+      <div className={styles.Start_wrapper}>
+        <img className={styles.Start_logo} src={like} alt="like" />
 
-        <div className="start__content">
+        <div className={styles.Start_content}>
           {gameStatus === 'not started' && (
-            <h1 className="start__title">Who wants to be a millionaire?</h1>
+            <h1 className={styles.Start_title}>Who wants to be a millionaire?</h1>
           )}
 
           {gameStatus === 'finished' && (
-            <div className="start__score">
-              <h2 className="start__score-title">Total score:</h2>
-              <h3 className="start__title">{`$${score.toLocaleString()} earned`}</h3>
+            <div className={styles.Start_score}>
+              <h2 className={styles.Start_scoreTitle}>Total score:</h2>
+              <h3 className={styles.Start_title}>{`$${score.toLocaleString()} earned`}</h3>
             </div>
           )}
 
           <button
-            className="start__button"
+            className={styles.Start_button}
             type="button"
             onClick={onStartGame}
           >

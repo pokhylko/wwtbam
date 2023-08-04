@@ -10,7 +10,7 @@ import { Answer, QuestionType } from 'src/types';
 
 import { finishedGame, increaseCurrentStep, setScore } from '../Game/GameSlice';
 
-import './Question.scss';
+import styles from './Question.module.scss';
 
 export const Question: FC = () => {
   const dispatch = useAppDispatch();
@@ -68,26 +68,28 @@ export const Question: FC = () => {
   }, [currentStep, dispatch, gameOver, isAnswerCorrected, questions.length]);
 
   return (
-    <div className="question">
-      <h2 className="question__title">{currentQuestion.question}</h2>
+    <div className={styles.Question}>
+      <h2 className={styles.Question_title}>{currentQuestion.question}</h2>
 
-      <div className="question__answers">
+      <div className={styles.Question_answers}>
         {currentQuestion.answers.map((answer) => (
           <button
             className={cn(
-              'question__button',
+              styles.Question_button,
               {
-                'question__button--correct': selectedAnswer?.option === answer.option && isAnswerCorrected,
-                'question__button--wrong': selectedAnswer?.option === answer.option && isAnswerCorrected === false,
-                'question__button--selected': selectedAnswer?.option === answer.option,
-                'question__button--inactive': selectedAnswer,
+                [styles.Question_button___correct]: selectedAnswer?.option === answer.option
+                  && isAnswerCorrected,
+                [styles.Question_button___wrong]: selectedAnswer?.option === answer.option
+                  && isAnswerCorrected === false,
+                [styles.Question_button___selected]: selectedAnswer?.option === answer.option,
+                [styles.Question_button___inactive]: selectedAnswer,
               },
             )}
             type="button"
             key={answer.id}
             onClick={() => handleAnswer(answer)}
           >
-            <span className="question__button-letter">
+            <span className={styles.Question_buttonLetter}>
               {answer.id}
             </span>
             {answer.option}

@@ -1,33 +1,37 @@
-.start {
+@import "../../styles/colors.scss";
+
+.Start {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100vh;
 
-  &--bg {
-    background: linear-gradient(to top left, #fff3eb 50%, #fff 50%);
+  &___bg {
+    background: linear-gradient(to top left, $orange-5 50%, #fff 50%);
   }
 }
 
-.start__wrapper {
+.Start_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 110rem;
+  width: 120rem;
   margin: 0 auto;
+  padding: 5rem 1.5rem;
 }
 
-.start__logo {
+.Start_logo {
   width: 100%;
   max-width: 45rem;
 }
 
-.start__content {
-  display: grid;
+.Start_content {
+  display: flex;
+  flex-direction: column;
   row-gap: 6.5rem;
 }
 
-.start__title {
+.Start_title {
   font-size: 5.6rem;
   font-style: normal;
   font-weight: 600;
@@ -35,7 +39,7 @@
   max-width: 52.5rem;
 }
 
-.start__score-title {
+.Start_scoreTitle {
   font-size: 3.2rem;
   font-style: normal;
   font-weight: 600;
@@ -44,14 +48,14 @@
   margin: 0;
 }
 
-.start__button {
+.Start_button {
   font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: 2.3rem;
   text-align: center;
   color: #fff;
-  background-color: #ff8b37;
+  background-color: $orange-100;
   border: none;
   border-radius: 1.2rem;
   padding: 2rem 2.4rem;
@@ -60,42 +64,33 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #ffac70;
+    background-color: $orange-80;
   }
 
   &:active {
-    background-color: #e87928;
-  }
-}
-
-@media screen and (max-width: 1439px) and (min-width: 992px) {
-  .start {
-    .start__wrapper {
-      width: 80rem;
-    }
+    background-color: $orange-120;
   }
 }
 
 @media screen and (max-width: 991px) {
-  .start__wrapper {
+  .Start_wrapper {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 5rem 1.5rem;
   }
 
-  .start__logo {
+  .Start_logo {
     max-width: 19.6rem;
     flex: 50%;
   }
 
-  .start__content {
+  .Start_content {
     align-items: center;
     justify-content: space-between;
     flex: 50%;
   }
 
-  .start__title {
+  .Start_title {
     font-size: 3.2rem;
     line-height: 3.712rem;
     text-align: center;
@@ -103,7 +98,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  .start__button {
+  .Start_button {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    border-radius: 0.8rem;
+    padding: 1.6rem 2.4rem;
+    width: 28.8rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .Start_button {
     font-size: 1.4rem;
     line-height: 1.6rem;
     border-radius: 0.8rem;

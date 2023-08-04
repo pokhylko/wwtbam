@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "target": "es6",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": false,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx",
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "incremental": true,
+      "typeRoots": [
+        "./node_modules/@types",
+        "./src/types"
+      ],
+      "plugins": [
+        {
+          "name": "typescript-plugin-css-modules"
+        }
+      ]
+    },
+    "include": [
+      "src/**/*",
+      "custom.d.ts",
+      "css-modules.d.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "build",
+      "dist",
+      "public"
+    ]
+}

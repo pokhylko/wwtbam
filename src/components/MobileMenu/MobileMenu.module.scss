@@ -1,17 +1,18 @@
-.mobile-menu {
+.MobileMenu {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
-.mobile-menu__button {
+.MobileMenu_button {
   border: none;
   padding: 0;
   cursor: pointer;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 992px) {
-  .mobile-menu {
+  .MobileMenu {
     display: none;
   }
 }

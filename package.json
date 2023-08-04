@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "lint-ts": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "lint-css": "stylelint \"src/**/*.{css,scss}\" --fix",
-    "lint": "npm run lint-ts && npm run lint-css"
+    "lint": "npm run lint-ts && npm run lint-css",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -37,12 +38,10 @@
   },
   "lint-staged": {
     "*.{css,scss}": [
-      "stylelint",
-      "git add"
+      "stylelint"
     ],
-    "*.{js,jsx}": [
-      "eslint",
-      "git add"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint"
     ]
   },
   "browserslist": {

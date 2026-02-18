@@ -1,3 +1,9 @@
 {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "selector-class-pattern": "^[A-Z][a-zA-Z]*(_[a-zA-Z]+)*(___[a-zA-Z]+)?$",
+    "scss/dollar-variable-empty-line-before": null,
+    "no-descending-specificity": null,
+    "declaration-block-no-shorthand-property-overrides": null
+  }
 }

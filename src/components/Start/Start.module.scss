@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors.scss" as *;
 
 .Start {
   display: flex;
@@ -7,7 +7,7 @@
   height: 100vh;
 
   &___bg {
-    background: linear-gradient(to top left, $orange-5 50%, #fff 50%);
+    background: linear-gradient(to top left, $orange-5 50%, $white-100 50%);
   }
 }
 
@@ -33,7 +33,6 @@
 
 .Start_title {
   font-size: 5.6rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 6.5rem;
   max-width: 52.5rem;
@@ -41,20 +40,18 @@
 
 .Start_scoreTitle {
   font-size: 3.2rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 3.7rem;
-  color: #97979b;
+  color: $black-60;
   margin: 0;
 }
 
 .Start_button {
   font-size: 2rem;
-  font-style: normal;
   font-weight: 600;
   line-height: 2.3rem;
   text-align: center;
-  color: #fff;
+  color: $white-100;
   background-color: $orange-100;
   border: none;
   border-radius: 1.2rem;
@@ -72,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (width <= 991px) {
   .Start_wrapper {
     flex-direction: column;
     justify-content: space-between;
@@ -97,17 +94,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .Start_button {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    border-radius: 0.8rem;
-    padding: 1.6rem 2.4rem;
-    width: 28.8rem;
-  }
-}
-
-@media screen and (max-width: 599px) {
+@media screen and (width <= 767px) {
   .Start_button {
     font-size: 1.4rem;
     line-height: 1.6rem;

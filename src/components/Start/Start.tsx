@@ -1,14 +1,11 @@
 import { FC } from 'react';
 
-import cn from 'classnames';
-
-import { useAppDispatch, useAppSelector } from 'src/store/hooks';
-
-import { startedGame } from '../Game/GameSlice';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import { startGame } from '@/components/Game/GameSlice';
 
 import styles from './Start.module.scss';
 
-import like from '../../images/like.svg';
+import like from '@/images/like.svg';
 
 export const Start: FC = () => {
   const dispatch = useAppDispatch();
@@ -16,15 +13,11 @@ export const Start: FC = () => {
   const { gameStatus, score } = useAppSelector((state) => state.game);
 
   const onStartGame = () => {
-    dispatch(startedGame());
+    dispatch(startGame());
   };
 
   return (
-    <div className={cn(
-      styles.Start,
-      { [styles.Start___bg]: gameStatus !== 'started' },
-    )}
-    >
+    <div className={`${styles.Start} ${styles.Start___bg}`}>
       <div className={styles.Start_wrapper}>
         <img className={styles.Start_logo} src={like} alt="like" />
 
@@ -34,7 +27,7 @@ export const Start: FC = () => {
           )}
 
           {gameStatus === 'finished' && (
-            <div className={styles.Start_score}>
+            <div>
               <h2 className={styles.Start_scoreTitle}>Total score:</h2>
               <h3 className={styles.Start_title}>{`$${score.toLocaleString()} earned`}</h3>
             </div>

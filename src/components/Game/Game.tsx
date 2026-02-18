@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 
-import { MobileMenu } from '../MobileMenu';
-import { Question } from '../Question';
-import { Prizes } from '../Prizes';
+import { MobileMenu } from '@/components/MobileMenu';
+import { Question } from '@/components/Question';
+import { Prizes } from '@/components/Prizes';
 
 import styles from './Game.module.scss';
 

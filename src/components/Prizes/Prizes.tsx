@@ -1,24 +1,22 @@
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 
 import cn from 'classnames';
 
-import { useAppSelector } from 'src/store/hooks';
+import { useAppSelector } from '@/store/hooks';
+import questions from '@/data/game-configuration.json';
 
 import styles from './Prizes.module.scss';
 
-type Props = {
+const reversePrizes = questions.map((question) => question.prize).reverse();
+
+interface Props {
   isHideSteps: boolean;
-};
+}
 
 export const Prizes: FC<Props> = ({ isHideSteps }) => {
-  const { currentStep, questions } = useAppSelector((state) => state.game);
+  const { currentStep } = useAppSelector((state) => state.game);
 
-  const currentPrize = questions[currentStep].prize;
-
-  const reversePrizes = useMemo(
-    () => questions.map((question) => question.prize).reverse(),
-    [questions],
-  );
+  const currentPrize = questions[currentStep]?.prize ?? 0;
 
   return (
     <div className={cn(

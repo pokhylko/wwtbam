@@ -1,7 +1,7 @@
 .MobileMenu {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2rem;
+  right: 2rem;
 }
 
 .MobileMenu_button {
@@ -11,7 +11,7 @@
   background-color: transparent;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (width >= 992px) {
   .MobileMenu {
     display: none;
   }

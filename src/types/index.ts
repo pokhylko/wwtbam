@@ -1,12 +1,12 @@
-export type Answer = {
+export interface Answer {
   id: string;
   option: string;
-  isCorrected: boolean;
-};
+  isCorrect: boolean;
+}
 
-export type QuestionType = {
+export interface QuestionType {
   id: number;
   question: string;
   answers: Answer[];
   prize: number;
-};
+}

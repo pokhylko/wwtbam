@@ -1,9 +1,9 @@
-@import "../../styles/colors.scss";
+@use "../../styles/colors.scss" as *;
 
 .Prizes {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: $white-100;
   overflow-x: hidden;
   padding: 6.4rem 5rem 3.2rem;
 }
@@ -22,13 +22,11 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  font-style: normal;
   font-weight: 400;
   line-height: 2.3rem;
-  place-items: center;
-  width: 240px;
-  height: 40px;
-  min-height: 40px;
+  width: 24rem;
+  height: 4rem;
+  min-height: 4rem;
   position: relative;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -53,7 +51,7 @@
   }
 
   &___inactive {
-    background-image: url(../../images/step-inactive.svg);
+    background-image: url("../../images/step-inactive.svg");
     color: $black-100;
 
     &::before,
@@ -63,7 +61,7 @@
   }
 
   &___current {
-    background-image: url(../../images/step-current.svg);
+    background-image: url("../../images/step-current.svg");
     color: $orange-100;
 
     &::before,
@@ -73,7 +71,7 @@
   }
 
   &___finished {
-    background-image: url(../../images/step-finished.svg);
+    background-image: url("../../images/step-finished.svg");
     color: $black-40;
 
     &::before,
@@ -83,7 +81,7 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (width <= 991px) {
   .Prizes {
     position: absolute;
     width: 100%;
@@ -95,21 +93,21 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .Prizes,
   .Prizes_step {
     padding: 0.4rem 1rem 0.5rem;
 
     &___inactive {
-      background-image: url(../../images/step-inactive-mobile.svg);
+      background-image: url("../../images/step-inactive-mobile.svg");
     }
 
     &___current {
-      background-image: url(../../images/step-current-mobile.svg);
+      background-image: url("../../images/step-current-mobile.svg");
     }
 
     &___finished {
-      background-image: url(../../images/step-finished-mobile.svg);
+      background-image: url("../../images/step-finished-mobile.svg");
     }
   }
 }

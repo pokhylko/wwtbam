@@ -4,12 +4,12 @@ import {
 
 import styles from './MobileMenu.module.scss';
 
-import { ReactComponent as OpenMenu } from '../../images/open-menu.svg';
-import { ReactComponent as CloseMenu } from '../../images/close-menu.svg';
+import OpenMenu from '@/images/open-menu.svg?react';
+import CloseMenu from '@/images/close-menu.svg?react';
 
-type Props = {
+interface Props {
   setIsHideSteps: Dispatch<SetStateAction<boolean>>;
-};
+}
 
 export const MobileMenu: FC<Props> = ({ setIsHideSteps }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -6,8 +6,9 @@ import { App } from './App';
 
 import { store } from './store/store';
 
-const container = document.getElementById('root');
-const root = createRoot(container!);
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- root element always exists in index.html
+const container = document.getElementById('root')!;
+const root = createRoot(container);
 
 root.render(
   <StrictMode>

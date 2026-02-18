@@ -4,22 +4,22 @@
   "answers": [{
     "id": "A",
     "option": "1000",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "2345",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option":  "3600",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "D",
     "option": "6300",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 500
 },
@@ -29,22 +29,22 @@
   "answers": [{
     "id": "A",
     "option": "Xbox",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Atari",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Game Boy",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "PlayStation",
-    "isCorrected": true
+    "isCorrect": true
   }],
   "prize": 1000
 },
@@ -54,22 +54,22 @@
   "answers": [{
     "id": "A",
     "option": "Sydney",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Los Angeles",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "New York City",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Paris",
-    "isCorrected": true
+    "isCorrect": true
   }],
   "prize": 2000
 },
@@ -79,22 +79,22 @@
   "answers": [{
     "id": "A",
     "option": "Soccer",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "B",
     "option": "Basketball",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Baseball",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Cricket",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 4000
 },
@@ -104,22 +104,22 @@
   "answers": [{
     "id": "A",
     "option": "5",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "6",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "7",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "D",
     "option": "8",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 8000
 },
@@ -129,22 +129,22 @@
   "answers": [{
     "id": "A",
     "option": "John Lennon",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Paul McCartney",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Ringo Star",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Justin Timberlake",
-    "isCorrected": true
+    "isCorrect": true
   }],
   "prize": 16000
 },
@@ -154,22 +154,22 @@
   "answers": [{
     "id": "A",
     "option": "Spaghetti",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Escargot",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "C",
     "option": "Fettuccine",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Ziti",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 32000
 },
@@ -179,22 +179,22 @@
   "answers": [{
     "id": "A",
     "option": "California",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "B",
     "option": "Utah",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Hawaii",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Montana",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 64000
 },
@@ -204,22 +204,22 @@
   "answers": [{
     "id": "A",
     "option": "Guitar",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Bass",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Trombone",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "D",
     "option": "Cello",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 125000
 },
@@ -229,22 +229,22 @@
   "answers": [{
     "id": "A",
     "option": "Ice cream",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Televisions",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Hair brushes",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Electric cars",
-    "isCorrected": true
+    "isCorrect": true
   }],
   "prize": 250000
 },
@@ -254,22 +254,22 @@
   "answers": [{
     "id": "A",
     "option": "Chimpanzee",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Dolphin",
-    "isCorrected": true
+    "isCorrect": true
   },
   {
     "id": "C",
-    "option": "Gorillla",
-    "isCorrected": false
+    "option": "Gorilla",
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Orangutan",
-    "isCorrected": false
+    "isCorrect": false
   }],
   "prize": 500000
 },
@@ -279,22 +279,22 @@
   "answers": [{
     "id": "A",
     "option": "Oxygen",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "B",
     "option": "Nitrogen",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "C",
     "option": "Sulfur Hexafluoride",
-    "isCorrected": false
+    "isCorrect": false
   },
   {
     "id": "D",
     "option": "Helium",
-    "isCorrected": true
+    "isCorrect": true
   }],
   "prize": 1000000
 }]

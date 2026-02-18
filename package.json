@@ -2,39 +2,25 @@
   "name": "wwtbam",
   "homepage": ".",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "classnames": "^2.3.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "node-sass": "^9.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.1.2",
-    "react-scripts": "^5.0.1",
-    "typescript": "^4.9.5"
+    "@reduxjs/toolkit": "^2",
+    "classnames": "^2",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-redux": "^9"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist",
     "lint-ts": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "lint-css": "stylelint \"src/**/*.{css,scss}\" --fix",
     "lint": "npm run lint-ts && npm run lint-css",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{css,scss}": [
@@ -44,36 +30,25 @@
       "eslint"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.5",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
-    "eslint": "^8.46.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "gh-pages": "^5.0.0",
-    "stylelint": "^15.10.2",
-    "stylelint-config-standard": "^34.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "@eslint/js": "^9",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4",
+    "eslint": "^9",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^5",
+    "eslint-plugin-react-refresh": "^0.4",
+    "gh-pages": "^6",
+    "globals": "^15",
+    "husky": "^9",
+    "lint-staged": "^15",
+    "sass": "^1",
+    "stylelint": "^16",
+    "stylelint-config-standard-scss": "^14",
+    "typescript": "^5",
+    "typescript-eslint": "^8",
+    "vite": "^6",
+    "vite-plugin-svgr": "^4"
   }
 }
